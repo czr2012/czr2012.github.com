@@ -1,1 +1,779 @@
-test
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="no-js">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="csrf-token" content="1740814574:ur6bK1cQqJH7QtFNlJk+zZ0rg6KPKwJqpQWGYipFtH4=">
+    <meta name="renderer" content="webkit">
+    <script>
+        window.__feInitLocalTime = new Date().getTime() / 1000;
+        window.__feConfigVersion = 'c8172de09ae2e809';
+        window.__luoguTagVersion = '1740725497';
+            </script>
+    <title>题解：P10400 『STA - R5』消失的计算机 - 洛谷专栏</title>
+    <link rel="icon" href="/favicon.ico">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'unsafe-inline' luogu.com *.luogu.com luogu.com.cn *.luogu.com.cn luogu.org *.luogu.org luoguprivate.oss-cn-hangzhou.aliyuncs.com luogu.oss-cn-hangzhou.aliyuncs.com https://challenges.cloudflare.com wss: blob:; img-src * data:; font-src * data:; worker-src data: blob:; frame-src https://player.bilibili.com https://www.bilibili.com https://challenges.cloudflare.com">    <script id="lentille-context" type="application/json">{"instance":"main","template":"article.show","status":200,"locale":"zh-CN","data":{"article":{"lid":"tma533uw","title":"\u9898\u89e3\uff1aP10400 \u300eSTA - R5\u300f\u6d88\u5931\u7684\u8ba1\u7b97\u673a","time":1715155058,"author":{"uid":1154618,"avatar":"https:\/\/cdn.luogu.com.cn\/upload\/usericon\/1154618.png","name":"florrygg","slogan":"","badge":null,"isAdmin":false,"isBanned":false,"color":"Red","ccfLevel":0,"background":"","verified":true},"upvote":3,"replyCount":1,"favorCount":0,"category":2,"status":2,"solutionFor":{"pid":"P10400","type":"P","title":"\u300eSTA - R5\u300f\u6d88\u5931\u7684\u8ba1\u7b97\u673a","difficulty":7,"submitted":true,"accepted":true},"promoteStatus":2,"collection":null,"content":"[\u9898\u9762](https:\/\/www.luogu.com.cn\/problem\/P10400)\uff0c[~~\u77ed\u6682\u7684\u6700\u4f18\u89e3~~](https:\/\/www.luogu.com.cn\/record\/158380734)\u3002\n\n# \u9898\u610f\n\n\u5148\u89e3\u91ca\u4e00\u4e2a\u7b26\u53f7\uff1a$\\gets$ \u5176\u5b9e\u5728\u8fd9\u9053\u9898\u76ee\u5f53\u4e2d\u610f\u601d\u5c31\u662f $=$ \u5e0c\u671b\u5927\u5bb6\u4e0d\u8981\u50cf\u6211\u4e00\u6837\u8bfb\u4e86\u534a\u5929\u3002\n\n\u518d\u89e3\u91ca\u4e00\u4e0b #2 \u7684 $\\Large\\binom n2$\uff0c\u8d5b\u65f6\u6211\u8fd8\u4e13\u95e8\u5728\u7b54\u7591\u5e16\u95ee\u4e86\u4e00\u4e0b\uff0c\u5bf9\u4e8e\u6570\u5b66\u4e0d\u592a\u597d\u7684\u4eba\uff08\u5c31\u662f\u6211\uff09\u7ffb\u8bd1\u6210\u4eba\u8bdd\u5c31\u662f $\\Large C_n^2$\u3002\n\n# \u601d\u8def\n\n\u8be5\u9898\u89e3\u53ea\u8bb2\u7206\u6807\uff0c\u5982\u679c\u4e0d\u77e5\u9053\u600e\u4e48 AC \u8bf7\u79fb\u6b65\u81f3\u6211\u4eec\u51fa\u9898\u8005 jijidawang \u5927\u5927\u7684[\u9898\u89e3](https:\/\/www.luogu.com.cn\/article\/wcb68jhu)\u3002\n\n## #3\n\n\u89c2\u5bdf\u4e00\u4e0b\u6807\u51c6\u505a\u6cd5\uff1a\n```plant\n233\nnew 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nassign 2 1\ndec 2\ndec 2\ndec 2\nassign 3 2\ndec 2\ndec 2\nassign 4 2\ndec 2\ndec 2\ndec 2\ndec 2\ndec 2\ndec 2\nassign 5 1\nassign 6 1\nassign 7 1\nassign 8 1\nnew 9\ndec 8\nifneq 8 3 goto 221\ndec 7\nifneq 7 3 goto 220\ndec 6\nifneq 6 4 goto 219\ndec 5\nifneq 5 2 goto 218\nnew 1\nnew 1\nnew 1\nnew 1\n```\n\u4e0d\u96be\u53d1\u73b0\u56e0\u4e3a $5\\le n$ \u6240\u4ee5\u524d 4 \u4e2a `ifeq 1 3 goto 1` \u5176\u5b9e\u662f\u4e0d\u9700\u8981\u7684\uff08~~\u6c34~~\uff09\uff0c\u7136\u540e\u5c31\u7206\u6807\u4e86\u3002\n```plant\n229\nnew 1\ndec 1\ndec 1\ndec 1\ndec 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nifeq 1 3 goto 1\ndec 1\nassign 2 1\ndec 2\ndec 2\ndec 2\nassign 3 2\ndec 2\ndec 2\nassign 4 2\ndec 2\ndec 2\ndec 2\ndec 2\ndec 2\ndec 2\nassign 5 1\nassign 6 1\nassign 7 1\nassign 8 1\nnew 9\ndec 8\nifneq 8 3 goto 217\ndec 7\nifneq 7 3 goto 216\ndec 6\nifneq 6 4 goto 215\ndec 5\nifneq 5 2 goto 214\nnew 1\nnew 1\nnew 1\nnew 1\n```\n\n## #5\n\n\u4e0d\u662f\u628a $n^2-1$ \u8f6c\u6362\u6210 $n+(n+1)(n-2)+1$ \u5417\uff0c\u7136\u540e\u9898\u89e3\u5c31\u2026\u2026\n```plant\n10\nassign 2 1\ndec 2\ndec 2\nassign 3 1\ndec 3\nnew 4\niftry 3 goto 5\ndec 2\nifneq 2 5 goto 4\nnew 1\n```\n\u9898\u89e3\u5f53\u4e2d\u662f\u8ba9 $p_2=n-2\\ p_1=n$ \u7136\u540e\u5185\u5c42\u5728 $p_1=0$ \u662f\u518d\u6267\u884c\u4e00\u6b21\uff0c\u4f46\u662f\u5982\u679c\u8ba9 $p_1=n-2\\ p_2=n+1$ \u4e0d\u5c31\u53ef\u4ee5\u628a `assign 2 1` \u548c `new 1` \u5408\u5e76\u5230\u4e00\u8d77\u5408\u5e76\u6210 `new 2` \u7136\u540e\u5c31\u7206\u6807\u4e86\u3002\n```plant\n9\nnew 2\ndec 1\ndec 1\nassign 3 1\ndec 3\nnew 4\nifneq 3 5 goto 5\ndec 2\nifneq 2 5 goto 4\n```\n\n## #6\n\n\u672c\u8eab\u9898\u89e3\u7ed9\u7684\u662f $\\large n+2\\times2\\times2\\times2\\times5\\times5\\times5$\uff0c\u4f46\u662f\u6211\u4eec\u53ef\u4ee5\u6539\u6210 $\\large n+2\\times10\\times10\\times10$\uff0c\u8fd9\u6837\u5c31\u53ef\u4ee5\u8282\u7701\u5faa\u73af\u4e86\u3002\n```plant\n24\ndec 2\ndec 2\ndec 2\ndec 2\ndec 2\ndec 2\ndec 2\ndec 2\ndec 2\ndec 2\ndec 3\ndec 3\ndec 4\nassign 5 8\ndec 5\nassign 6 8\ndec 6\nassign 7 8\ndec 7\nnew 9\nifneq 7 2 goto 19\nifneq 6 2 goto 17\nifneq 5 2 goto 15\nifneq 3 4 goto 13\n```\n\n## #7 #8 #9 #10\n\n\u90fd\u53ea\u9700\u8981\u5728\u5f00\u5934\u5904\u7406\u53d8\u91cf\u7684\u65f6\u5019\u7528\u4e00\u70b9\u667a\u6167\u4f18\u5316\u4e00\u4e0b\u5373\u53ef\u3002\n\n\u539f #7\n```plant\n14\ndec 2\ndec 2\nassign 3 2\nassign 4 6\ndec 2\ndec 4\nifneq 3 4 goto 5\nnew 5\nassign 3 1\nassign 4 6\ndec 3\ndec 4\nifneq 2 4 goto 11\niftry 3 goto 3\n```\n\u73b0 #7\n```plant\n13\nassign 2 1\ndec 3\ndec 3\ndec 2\ndec 2\nnew 7\nassign 4 3\nassign 5 6\ndec 5\ndec 3\ndec 2\nifneq 5 4 goto 9\niftry 2 goto 6\n```\n\n\u539f #8\n```plant\n7\nassign 2 1\ndec 1\ndec 1\niftry 1 goto 1\ndec 2\nnew 3\niftry 2 goto 5\n```\n\u73b0 #8\n```plant\n6\nnew 2\nassign 2 1\ndec 1\nifeq 1 1000 goto 1\ndec 1\nifneq 2 1000 goto 2\n```\n\n\u539f #9\n```plant\n18\ndec 2\ndec 2\nassign 4 2\ndec 4\ndec 4\ndec 1\ndec 1\ndec 1\ndec 1\nassign 3 1\ndec 3\niftry 3 goto 6\nnew 5\ndec 1\ndec 1\nifeq 1 4 goto 13\nnew 5\nifeq 1 2 goto 13\n```\n\u73b0 #9\n```plant\n17\ndec 200\ndec 200\ndec 200\nassign 300 200\ndec 300\ndec 1\ndec 1\ndec 1\ndec 1\ndec 1\niftry 1 goto 7\nnew 800\ndec 1\nifeq 1 300 goto 12\nnew 800\ndec 1\nifeq 1 200 goto 12\n```\n\n\u539f #10\n```plant\n14\nassign 2 1\nassign 4 2\nassign 3 1\ndec 3\ndec 4\niftry 3 goto 4\nnew 5\nassign 3 1\ndec 3\ndec 4\niftry 3 goto 9\niftry 4 goto 7\ndec 1\nifneq 1 6 goto 2\n```\n\u73b0 #10\n```plant\n11\nassign 2 1\ndec 1\nnew 4\nnew 4\nnew 4\nifneq 1 3 goto 2\ndec 2\ndec 2\ndec 2\nnew 4\niftry 2 goto 7\n```\n\n# \u9057\u4ea7\n\n\u7559\u4e0b\u4e00\u4e2a\u7b80\u5355\u7684\u6d4b\u8bd5\u7a0b\u5e8f\uff0c\u9700\u8981\u5728\u8fd0\u884c\u76f4\u63a5\u628a $n$ \u7684\u503c\u5148\u5199\u597d\uff08\u540e\u53f0\u7684\u4e00\u4e2a\u6b63\u6574\u6570\uff09\uff0c\u7136\u540e\u8fd0\u884c\uff0c\u76f4\u63a5\u7c98\u5165\u6307\u4ee4\u5373\u53ef\u8ba1\u7b97\u51fa\u7ed3\u679c\u3002\n\n```cpp\n#include \u003Cbits\/stdc++.h\u003E\nusing namespace std;\n#define il inline\n#define re register\n#define endl \u0027\\n\u0027\n\nconst int Maxn=3001;\nconst int maxn=1001;\nint n=5,p[maxn],t;\nstring op[maxn],flag;\nint x[maxn],y[maxn],l[maxn];\n\nsigned main()\n{\n\/\/\tfreopen(\u0022.in\u0022,\u0022r\u0022,stdin);\n\/\/\tfreopen(\u0022.out\u0022,\u0022w\u0022,stdout);\n\tios::sync_with_stdio(false);\n\tcin.tie(0);\n\tcout.tie(0);\n\tp[1]=n;\n\tcin\u003E\u003Et;\n\tfor(int i=1;i\u003C=t;i++)\n\t{\n\t\tcin\u003E\u003Eop[i];\n\t\tif(op[i]==\u0022new\u0022||op[i]==\u0022dec\u0022)\n\t\t{\n\t\t\tcin\u003E\u003Ex[i];\n\t\t}\n\t\telse if(op[i]==\u0022assign\u0022)\n\t\t{\n\t\t\tcin\u003E\u003Ex[i]\u003E\u003Ey[i];\n\t\t}\n\t\telse if(op[i]==\u0022iftry\u0022)\n\t\t{\n\t\t\tcin\u003E\u003Ex[i];\n\t\t\tcin\u003E\u003Eflag;\n\t\t\tcin\u003E\u003El[i];\n\t\t}\n\t\telse if(op[i]==\u0022ifeq\u0022||op[i]==\u0022ifneq\u0022)\n\t\t{\n\t\t\tcin\u003E\u003Ex[i]\u003E\u003Ey[i]\u003E\u003Eflag\u003E\u003El[i];\n\t\t}\n\t}\n\tfor(int i=1;i\u003C=t;i++)\n\t{\n\t\tif(op[i]==\u0022new\u0022)\n\t\t{\n\t\t\tp[x[i]]=++n;\n\t\t}\n\t\telse if(op[i]==\u0022dec\u0022)\n\t\t{\n\t\t\tp[x[i]]--;\n\t\t}\n\t\telse if(op[i]==\u0022assign\u0022)\n\t\t{\n\t\t\tp[x[i]]=p[y[i]];\n\t\t}\n\t\telse if(op[i]==\u0022iftry\u0022)\n\t\t{\n\t\t\tif(p[x[i]]\u003E=0)\n\t\t\t{\n\t\t\t\ti=l[i]-1;\n\t\t\t}\n\t\t}\n\t\telse if(op[i]==\u0022ifeq\u0022)\n\t\t{\n\t\t\tif(p[x[i]]==p[y[i]])\n\t\t\t{\n\t\t\t\ti=l[i]-1;\n\t\t\t}\n\t\t}\n\t\telse if(op[i]==\u0022ifneq\u0022)\n\t\t{\n\t\t\tif(p[x[i]]!=p[y[i]])\n\t\t\t{\n\t\t\t\ti=l[i]-1;\n\t\t\t}\n\t\t}\n\t}\n\tcout\u003C\u003Cn\u003C\u003Cendl;\n\treturn 0;\n}\n```","contentFull":true,"adminNote":null,"voted":null,"canReply":true,"canEdit":true},"favored":false,"voted":null,"canReply":true,"canEdit":true},"user":{"uid":1154618,"avatar":"https:\/\/cdn.luogu.com.cn\/upload\/usericon\/1154618.png","name":"florrygg","slogan":"","badge":null,"isAdmin":false,"isBanned":false,"color":"Red","ccfLevel":0,"background":"","verified":true,"followingCount":0,"followerCount":0,"ranking":null,"unreadMessageCount":0,"unreadNoticeCount":0},"time":1740728174.705965,"theme":{"id":232169,"header":{"imagePath":"https:\/\/s1.ax1x.com\/\/2022\/\/08\/\/11\/\/v8UkLQ.gif","color":[[35,37,38,1],[65,67,69,1]],"blur":0,"brightness":0,"degree":90,"repeat":1,"position":[1,1],"size":[-1,-1],"type":1,"__CLASS_NAME":"Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"},"sideNav":{"logoBackgroundColor":[33,136,33,1],"color":[14,53,14,1],"invertColor":false,"__CLASS_NAME":"Luogu\\DataClass\\User\\ThemeConfig\\SideNavConfig"},"footer":{"imagePath":"https:\/\/s1.ax1x.com\/\/2022\/\/08\/\/11\/\/v8UkLQ.gif","color":[[51,51,51,1]],"blur":0,"brightness":0,"degree":0,"repeat":3,"position":[0,50],"size":[0,0],"type":1,"__CLASS_NAME":"Luogu\\DataClass\\User\\ThemeConfig\\HeaderFooterConfig"}}}</script>                <script src="https://fecdn.luogu.com.cn/columba/loader.20250218-751.js" charset="utf-8" defer></script>
+    <link rel="stylesheet" href="https://fecdn.luogu.com.cn/columba/loader.20250218-751.css" />
+    <script src="https://fecdn.luogu.com.cn/columba/vendor.20250218-751.js" charset="utf-8" defer></script>
+        <link rel="canonical" href="https://www.luogu.com.cn/article/tma533uw" />
+    <script type="application/ld+json">{"@context":"https:\/\/schema.org","@type":"Article","name":"\u9898\u89e3\uff1aP10400 \u300eSTA - R5\u300f\u6d88\u5931\u7684\u8ba1\u7b97\u673a","description":"\u9898\u9762\uff0c\u77ed\u6682\u7684\u6700\u4f18\u89e3\u3002\n\u9898\u610f\n\u5148\u89e3\u91ca\u4e00\u4e2a\u7b26\u53f7\uff1a\\gets \u5176\u5b9e\u5728\u8fd9\u9053\u9898\u76ee\u5f53\u4e2d\u610f\u601d\u5c31\u662f = \u5e0c\u671b\u5927\u5bb6\u4e0d\u8981\u50cf\u6211\u4e00\u6837\u8bfb\u4e86\u534a\u5929\u3002\n\u518d\u89e3\u91ca\u4e00\u4e0b #2 \u7684 \\Large\\binom n2\uff0c\u8d5b\u65f6\u6211\u8fd8\u4e13\u95e8\u5728\u7b54\u7591\u5e16\u95ee\u4e86\u4e00\u4e0b\uff0c\u5bf9\u4e8e\u6570\u5b66\u4e0d\u592a\u597d\u7684\u4eba\uff08\u5c31\u662f\u6211\uff09\u7ffb\u8bd1\u6210\u4eba\u8bdd\u5c31\u662f\u2026","genre":"\u9898\u89e3","author":{"@type":"Person","name":"florrygg"},"datePublished":"2024-05-08T15:57:38+08:00"}</script>
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="题解：P10400 『STA - R5』消失的计算机" />
+    <meta property="og:description" content="题面，短暂的最优解。
+题意
+先解释一个符号：\gets 其实在这道题目当中意思就是 = 希望大家不要像我一样读了半天。
+再解释一下 #2 的 \Large\binom n2，赛时我还专门在答疑帖问了一下，对于数学不太好的人（就是我）翻译成人话就是…" />
+    <meta property="article:section" content="题解" />
+    <meta property="article:author" content="florrygg" />
+    <meta property="article:published_time" content="2024-05-08T15:57:38+08:00" />
+    <meta property="og:url" content="https://www.luogu.com.cn/article/tma533uw" />
+    <meta property="og:site_name" content="洛谷专栏" />
+    <style>body {  }</style>
+</head>
+<body>
+<div id="app">
+    <noscript>
+        <h3>请<b style="color:#f00;">不要禁用</b>脚本，否则网页无法正常加载</h3>
+    </noscript>
+        <article>
+        <h1>题解：P10400 『STA - R5』消失的计算机</h1>
+        <p style="font-size: .75em;">
+            <a rel="author">florrygg</a>
+            ·
+            <time datetime="2024-05-08T15:57:38+08:00">2024-05-08 15:57:38</time>
+            ·
+            <a href="/article?category=2">题解</a>
+        </p>
+
+        <p>题面，<del>短暂的最优解</del>。</p>
+<h1>题意</h1>
+<p>先解释一个符号：<la-tex display="inline">\gets</la-tex> 其实在这道题目当中意思就是 <la-tex display="inline">=</la-tex> 希望大家不要像我一样读了半天。</p>
+<p>再解释一下 #2 的 <la-tex display="inline">\Large\binom n2</la-tex>，赛时我还专门在答疑帖问了一下，对于数学不太好的人（就是我）翻译成人话就是 <la-tex display="inline">\Large C_n^2</la-tex>。</p>
+<h1>思路</h1>
+<p>该题解只讲爆标，如果不知道怎么 AC 请移步至我们出题者 jijidawang 大大的题解。</p>
+<h2>3</h2>
+<p>观察一下标准做法：</p>
+<pre><code class="language-plant">233
+new 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+assign 2 1
+dec 2
+dec 2
+dec 2
+assign 3 2
+dec 2
+dec 2
+assign 4 2
+dec 2
+dec 2
+dec 2
+dec 2
+dec 2
+dec 2
+assign 5 1
+assign 6 1
+assign 7 1
+assign 8 1
+new 9
+dec 8
+ifneq 8 3 goto 221
+dec 7
+ifneq 7 3 goto 220
+dec 6
+ifneq 6 4 goto 219
+dec 5
+ifneq 5 2 goto 218
+new 1
+new 1
+new 1
+new 1</code></pre>
+<p>不难发现因为 <la-tex display="inline">5\le n</la-tex> 所以前 4 个 <code>ifeq 1 3 goto 1</code> 其实是不需要的（<del>水</del>），然后就爆标了。</p>
+<pre><code class="language-plant">229
+new 1
+dec 1
+dec 1
+dec 1
+dec 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+ifeq 1 3 goto 1
+dec 1
+assign 2 1
+dec 2
+dec 2
+dec 2
+assign 3 2
+dec 2
+dec 2
+assign 4 2
+dec 2
+dec 2
+dec 2
+dec 2
+dec 2
+dec 2
+assign 5 1
+assign 6 1
+assign 7 1
+assign 8 1
+new 9
+dec 8
+ifneq 8 3 goto 217
+dec 7
+ifneq 7 3 goto 216
+dec 6
+ifneq 6 4 goto 215
+dec 5
+ifneq 5 2 goto 214
+new 1
+new 1
+new 1
+new 1</code></pre>
+<h2>5</h2>
+<p>不是把 <la-tex display="inline">n^2-1</la-tex> 转换成 <la-tex display="inline">n+(n+1)(n-2)+1</la-tex> 吗，然后题解就……</p>
+<pre><code class="language-plant">10
+assign 2 1
+dec 2
+dec 2
+assign 3 1
+dec 3
+new 4
+iftry 3 goto 5
+dec 2
+ifneq 2 5 goto 4
+new 1</code></pre>
+<p>题解当中是让 <la-tex display="inline">p_2=n-2\ p_1=n</la-tex> 然后内层在 <la-tex display="inline">p_1=0</la-tex> 是再执行一次，但是如果让 <la-tex display="inline">p_1=n-2\ p_2=n+1</la-tex> 不就可以把 <code>assign 2 1</code> 和 <code>new 1</code> 合并到一起合并成 <code>new 2</code> 然后就爆标了。</p>
+<pre><code class="language-plant">9
+new 2
+dec 1
+dec 1
+assign 3 1
+dec 3
+new 4
+ifneq 3 5 goto 5
+dec 2
+ifneq 2 5 goto 4</code></pre>
+<h2>6</h2>
+<p>本身题解给的是 <la-tex display="inline">\large n+2\times2\times2\times2\times5\times5\times5</la-tex>，但是我们可以改成 <la-tex display="inline">\large n+2\times10\times10\times10</la-tex>，这样就可以节省循环了。</p>
+<pre><code class="language-plant">24
+dec 2
+dec 2
+dec 2
+dec 2
+dec 2
+dec 2
+dec 2
+dec 2
+dec 2
+dec 2
+dec 3
+dec 3
+dec 4
+assign 5 8
+dec 5
+assign 6 8
+dec 6
+assign 7 8
+dec 7
+new 9
+ifneq 7 2 goto 19
+ifneq 6 2 goto 17
+ifneq 5 2 goto 15
+ifneq 3 4 goto 13</code></pre>
+<h2>7 #8 #9 #10</h2>
+<p>都只需要在开头处理变量的时候用一点智慧优化一下即可。</p>
+<p>原 #7</p>
+<pre><code class="language-plant">14
+dec 2
+dec 2
+assign 3 2
+assign 4 6
+dec 2
+dec 4
+ifneq 3 4 goto 5
+new 5
+assign 3 1
+assign 4 6
+dec 3
+dec 4
+ifneq 2 4 goto 11
+iftry 3 goto 3</code></pre>
+<p>现 #7</p>
+<pre><code class="language-plant">13
+assign 2 1
+dec 3
+dec 3
+dec 2
+dec 2
+new 7
+assign 4 3
+assign 5 6
+dec 5
+dec 3
+dec 2
+ifneq 5 4 goto 9
+iftry 2 goto 6</code></pre>
+<p>原 #8</p>
+<pre><code class="language-plant">7
+assign 2 1
+dec 1
+dec 1
+iftry 1 goto 1
+dec 2
+new 3
+iftry 2 goto 5</code></pre>
+<p>现 #8</p>
+<pre><code class="language-plant">6
+new 2
+assign 2 1
+dec 1
+ifeq 1 1000 goto 1
+dec 1
+ifneq 2 1000 goto 2</code></pre>
+<p>原 #9</p>
+<pre><code class="language-plant">18
+dec 2
+dec 2
+assign 4 2
+dec 4
+dec 4
+dec 1
+dec 1
+dec 1
+dec 1
+assign 3 1
+dec 3
+iftry 3 goto 6
+new 5
+dec 1
+dec 1
+ifeq 1 4 goto 13
+new 5
+ifeq 1 2 goto 13</code></pre>
+<p>现 #9</p>
+<pre><code class="language-plant">17
+dec 200
+dec 200
+dec 200
+assign 300 200
+dec 300
+dec 1
+dec 1
+dec 1
+dec 1
+dec 1
+iftry 1 goto 7
+new 800
+dec 1
+ifeq 1 300 goto 12
+new 800
+dec 1
+ifeq 1 200 goto 12</code></pre>
+<p>原 #10</p>
+<pre><code class="language-plant">14
+assign 2 1
+assign 4 2
+assign 3 1
+dec 3
+dec 4
+iftry 3 goto 4
+new 5
+assign 3 1
+dec 3
+dec 4
+iftry 3 goto 9
+iftry 4 goto 7
+dec 1
+ifneq 1 6 goto 2</code></pre>
+<p>现 #10</p>
+<pre><code class="language-plant">11
+assign 2 1
+dec 1
+new 4
+new 4
+new 4
+ifneq 1 3 goto 2
+dec 2
+dec 2
+dec 2
+new 4
+iftry 2 goto 7</code></pre>
+<h1>遗产</h1>
+<p>留下一个简单的测试程序，需要在运行直接把 <la-tex display="inline">n</la-tex> 的值先写好（后台的一个正整数），然后运行，直接粘入指令即可计算出结果。</p>
+<pre><code class="language-cpp">#include &lt;bits/stdc++.h&gt;
+using namespace std;
+#define il inline
+#define re register
+#define endl '\n'
+
+const int Maxn=3001;
+const int maxn=1001;
+int n=5,p[maxn],t;
+string op[maxn],flag;
+int x[maxn],y[maxn],l[maxn];
+
+signed main()
+{
+//  freopen(".in","r",stdin);
+//  freopen(".out","w",stdout);
+    ios::sync_with_stdio(false);
+    cin.tie(0);
+    cout.tie(0);
+    p[1]=n;
+    cin&gt;&gt;t;
+    for(int i=1;i&lt;=t;i++)
+    {
+        cin&gt;&gt;op[i];
+        if(op[i]=="new"||op[i]=="dec")
+        {
+            cin&gt;&gt;x[i];
+        }
+        else if(op[i]=="assign")
+        {
+            cin&gt;&gt;x[i]&gt;&gt;y[i];
+        }
+        else if(op[i]=="iftry")
+        {
+            cin&gt;&gt;x[i];
+            cin&gt;&gt;flag;
+            cin&gt;&gt;l[i];
+        }
+        else if(op[i]=="ifeq"||op[i]=="ifneq")
+        {
+            cin&gt;&gt;x[i]&gt;&gt;y[i]&gt;&gt;flag&gt;&gt;l[i];
+        }
+    }
+    for(int i=1;i&lt;=t;i++)
+    {
+        if(op[i]=="new")
+        {
+            p[x[i]]=++n;
+        }
+        else if(op[i]=="dec")
+        {
+            p[x[i]]--;
+        }
+        else if(op[i]=="assign")
+        {
+            p[x[i]]=p[y[i]];
+        }
+        else if(op[i]=="iftry")
+        {
+            if(p[x[i]]&gt;=0)
+            {
+                i=l[i]-1;
+            }
+        }
+        else if(op[i]=="ifeq")
+        {
+            if(p[x[i]]==p[y[i]])
+            {
+                i=l[i]-1;
+            }
+        }
+        else if(op[i]=="ifneq")
+        {
+            if(p[x[i]]!=p[y[i]])
+            {
+                i=l[i]-1;
+            }
+        }
+    }
+    cout&lt;&lt;n&lt;&lt;endl;
+    return 0;
+}</code></pre>
+    </article>
+</div>
+</body>
+</html>
