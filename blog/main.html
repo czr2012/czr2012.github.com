@@ -38,5 +38,10 @@ function compile(){
     document.getElementById("result").innerHTML = html;
 }
 </script>
+<input id="button" type="button" value="点击" onclick="buttonClick();">
+<script>
+    var btn = document.getElementById("button");
+    btn.onclick=compile();
+</script>
 </body>
 </html>
