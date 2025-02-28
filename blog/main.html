@@ -30,6 +30,7 @@
     <div id="result"></div>
 
 </div>
+<button type="button" onclick="compile()">转换</button>
 <script type="text/javascript">
 function compile(){
     var text = document.getElementById("content").value;
@@ -37,10 +38,8 @@ function compile(){
     var html = converter.makeHtml(text);
     document.getElementById("result").innerHTML = html;
 }
+var btn = document.getElementById("button");  
+btn.onclick = compile();
 </script>
-<input  id="button" type="button" value="转换" >
-<script>
-    var btn = document.getElementById("button");  
-    btn.onclick = compile();
 </body>
 </html>
